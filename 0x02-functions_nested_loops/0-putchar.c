@@ -1,12 +1,11 @@
 #include "main.h"
 /**
-*
-* main is the entry point
+* main - Entry point
 * Description: use putchar to print _putchar
 * Return: 0 (success)
 */
 int main(void)
 {
-	putchar(_putchar);
+	putchar();
 	putchar('\n');
 }
