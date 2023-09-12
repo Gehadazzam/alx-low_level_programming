@@ -1,4 +1,4 @@
-int x;
+void add(int a);
 #include "main.h"
 /**
 *
