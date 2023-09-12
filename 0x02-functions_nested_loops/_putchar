@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+void putchar()
+{
+	putchar(_putchar);
+}
