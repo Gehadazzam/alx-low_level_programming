@@ -1,1 +1,6 @@
-int putchar(int _putchar);
+#include <stdio.h>
+int putchar();
+void putchar()
+{
+	printf("_putchar\n");
+}	
