@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include "main.h"
 /**
-* main - Entry point
 *
-* Description: Uses the function "printf" to print _putchar
-* Return: Always 0 (Success)
+* main is the entry point
+* Description: use putchar to print _putchar
+* Return: 0 (success)
 */
 int main(void)
 {
-	printf("_putchar \n");
-	return (0);
+	putchar(_putchar);
+	putchar('\n');
 }
