@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* main - write a function prints the numbers, from 0 to 9
+* main - Entry point
+* Description: use "print_numbers" to print specific numbers
 * Return: Always 0 (Success)
 */
 int main(void)
@@ -9,6 +10,10 @@ int main(void)
 	print_numbers();
 	return (0);
 }
+/**
+*print_numbers - print specific numbers
+*return (0)
+*/
 void print_numbers(void)
 {
 	char c = '0';
