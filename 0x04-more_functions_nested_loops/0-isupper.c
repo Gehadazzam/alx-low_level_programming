@@ -14,7 +14,7 @@ int main(void)
 */
 int _isupper(int c);
 int c;
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 'a' && c <= 'Z')
 {
 	return (1);
 }
