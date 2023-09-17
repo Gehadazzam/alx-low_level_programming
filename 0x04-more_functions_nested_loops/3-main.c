@@ -1,17 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
-*print_numbers - print specific numbers
-*return (0)
+* main - Entry point
+* Description: use "print_numbers" to print specific numbers
+* Return: Always 0 (Success)
 */
-void print_numbers(void)
+int main(void)
 {
-	char c = '0';
-
-	for (c = '0' ; c <= '9' ; c++)
-{
-		_putchar(c);
+	print_numbers();
+	return (0);
 }
-		_putchar('\n');
-}
-
