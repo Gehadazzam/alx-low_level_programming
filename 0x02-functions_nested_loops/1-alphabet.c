@@ -2,8 +2,6 @@
 /**
 *print_alphabet - Print the alphapet
 *
-*Description: main - Entry point
-*
 *@ch - character to be checked
 *
 * Return: (0) success
