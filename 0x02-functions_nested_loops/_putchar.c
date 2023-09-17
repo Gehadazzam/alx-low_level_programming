@@ -1,7 +1,16 @@
-#include <stdio.h>
 #include "main.h"
-void _putchar()
+#include <stdio.h>
+#include <unistd.h>
+
+/**
+*_putchar - Print one character
+*
+* @c: charachter to be checked
+*
+*Return: (write(1, &c, 1))
+*/
+
+int _putchar(char c)
 {
-char _putchar;
-	printf("_putchar\n");
+	return (write(1, &c, 1));
 }
