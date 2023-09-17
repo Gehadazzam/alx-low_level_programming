@@ -1,20 +1,15 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* main - Entry point
-* Description: Uses the function "_isupper" to detrmain the uppercase
-* Return: Always 0 (Success)
+*_isupper - determaine the uppercase
+*
+*@c : charchter to be checked
+*
+*Return: (1) if uppercase, (0) otherwise
 */
-int main(void)
+int _isupper(int c)
 {
-/**
-*Returns 1 if c is uppercase
-*Returns 0 otherwise
-*c - Carachter to check
-*/
-int _isupper(int c);
-int c;
-	if (c >= 'a' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 {
 	return (1);
 }
