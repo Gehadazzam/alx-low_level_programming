@@ -4,8 +4,6 @@
 /**
 *print_alphabet - Print the alphapet
 *
-*Description: main - Entry point
-*
 *@ch - character to be checked
 *
 * Return: (0) success
@@ -19,9 +17,4 @@ char ch;
 		_putchar(ch);
 		_putchar('\n');
 }
-}
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
