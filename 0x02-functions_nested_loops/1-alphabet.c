@@ -2,7 +2,7 @@
 /**
 *print_alphabet - Print the alphapet
 *
-* main - Entry point
+*Description: main - Entry point
 *
 *@ch - character to be checked
 *
@@ -16,7 +16,11 @@ void print_alphabet(void)
 		_putchar('\n');
 }
 }
-/*main - Entry point*/
+/**
+* main - Entry point
+*
+* Return: (0) success
+*/
 int main(void)
 {
 	print_alphabet();
