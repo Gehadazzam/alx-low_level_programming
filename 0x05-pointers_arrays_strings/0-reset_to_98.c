@@ -2,7 +2,7 @@
 /**
 *reset_to_98 - update the value to 98
 *
-*@n - number to update
+*@n: an integer to be updated
 *
 *Return: (0) always
 */
