@@ -3,18 +3,18 @@
 /**
 *print_rev - print string reverse
 *
-*@str: string to be checked
+*@s: string to be checked
 *
 *Return: (0) success
 */
-void print_rev(char *str)
+void print_rev(char *s)
 {
-char i, len, x;
-len = _strlen(*str);
-	for (i=0; i < len; i++)
+int i;
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	for (i = i - 1; s[i] != '\0'; i--)
 {
-x = str[i];
-str[i] = str[len-i-1];
-str[len-i-1] = x;
+		_putchar(s[i]);
 }
+		_putchar('\n');
 }
