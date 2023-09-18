@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
 *print_array - print elements of array
@@ -11,11 +10,14 @@
 */
 void print_array(int *a, int n)
 {
-	for (n = 0; n < 5; n++)
+int y;
+	for (y = 0; y < n; y++)
 {
-	printf("%i", *a);
+	printf("%d", a[y]);
+	if (y != n-1)
+{
 	printf(", ");
-	a++;
+}
 }
 	printf("\n");
 }
