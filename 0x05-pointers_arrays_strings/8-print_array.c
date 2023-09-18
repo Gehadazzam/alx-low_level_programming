@@ -14,7 +14,7 @@ int y;
 	for (y = 0; y < n; y++)
 {
 	printf("%d", a[y]);
-	if (y != n-1)
+	if (y != (n - 1))
 {
 	printf(", ");
 }
