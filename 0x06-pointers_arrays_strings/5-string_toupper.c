@@ -3,11 +3,19 @@
 /**
 **string_toupper - changes all lowercase letters of a string to uppercase
 *
-*@*: pointer to char we need to check
+*@str: pointer to char we need to check
 *
-*Return (char)
+*Return: (str)
 */
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
-
+int k;
+	for (k = 0; str[k] != '0'; k++)
+{
+		if (str[k] >= 'a' && str[k] <= 'z')
+{
+			str[k] -= 32;
+}
+}
+	return (str);
 }
