@@ -19,5 +19,5 @@ int i = 0;
 	i++;
 	n--;
 }
-	return (0);
+	return (s);
 }
