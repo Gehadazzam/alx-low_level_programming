@@ -22,10 +22,6 @@ int centos;
 		return (1);
 }
 centos = atoi(argv[1]);
-		if (centos < 0)
-{
-			printf("0\n");
-}
 		for (i = 0; i < 5; i++)
 {
 			while (centos >= coins_val[i])
