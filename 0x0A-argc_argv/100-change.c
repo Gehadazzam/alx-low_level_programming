@@ -22,7 +22,7 @@ int centos;
 		return (1);
 }
 centos = atoi(argv[1]);
-	if (centos < 0)
+		if (centos < 0)
 {
 			printf("0\n");
 }
