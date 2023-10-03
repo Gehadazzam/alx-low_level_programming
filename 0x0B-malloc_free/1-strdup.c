@@ -16,9 +16,9 @@ int length = strlen(str);
 	if (str == NULL)
 		return (NULL);
 p = malloc(length + 1 * sizeof(char));
-	if (p == NULL)
-		return (NULL);
 	for (i = 0; i < length; i++)
 		p[i] = str[i];
+	if (p == NULL)
+		return (NULL);
 	return (p);
 }
