@@ -16,7 +16,7 @@ int i, j, length_s1, length_s2;
 char *ptr;
 	length_s1 = (s1 != NULL) ? strlen(s1) : 0;
 	length_s2 = (s2 != NULL) ? strlen(s2) : 0;
-ptr = malloc((length_s1 + length_s2) * sizeof(char));
+ptr = malloc((length_s1 + length_s2 + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < length_s1; i++)
