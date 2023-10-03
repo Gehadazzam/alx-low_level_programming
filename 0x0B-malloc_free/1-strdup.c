@@ -19,6 +19,8 @@ p = malloc(length + 1 * sizeof(char));
 	for (i = 0; i < length; i++)
 		p[i] = str[i];
 	if (p == NULL)
+{
 		return (NULL);
+}
 	return (p);
 }
