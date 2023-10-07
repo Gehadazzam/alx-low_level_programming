@@ -15,8 +15,10 @@ int i;
 		printf("Fizz ");
 	else if (i % 5 == 0)
 		printf("Buzz ");
+	else if (i == 100)
+		printf("%d", i);
 	else
-		printf("%d ", i);
+		printf("%d ",i);
 }
 	printf("\n");
 	return (0);
