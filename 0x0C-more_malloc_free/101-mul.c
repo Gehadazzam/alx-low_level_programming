@@ -11,35 +11,33 @@
 */
 int main(int argc, char *argv[])
 {
-int mul, i, num1, num2;
-char x = "Error";
+int mul, i, x, y;
 	if (argc != 3)
 {
-		_putchar(x);
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
 		_putchar('\n');
 		exit (98);
 }
-	for (i = 0; argv[1][i] != '\0'; i++)
+	for (i = 1; *argv[i] < 3; i++)
 {
-		if (!isdigit(argv[1][i])
+		if (!isdigit(argv[i]))
 {
-			_putchar(x);
+			_putchar('E');
+			_putchar('r');
+			_putchar('r');
+			_putchar('O');
+			_putchar('r');
 			_putchar('\n');
 			exit (98);
 }
 }
-	for (i = 0; argv[2][i] != '\0'; i++)
-{
-		if (!isdigit(argv[2][i])
-{
-			_putchar(x);
-			_putchar('\n');
-			exit (98);
-}
-}
-num1 = atoi(argv[1]);
-num2 = atoi(argv[2]);
-mul = num1 * num2;
-	_putchar(mul);
+x = atoi(argv[1]);
+y = atoi(argv[2]);
+mul = x * y;
+	printf("%d\n", mul);
 	return (0);
 }
