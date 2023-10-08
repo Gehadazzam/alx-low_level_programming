@@ -18,7 +18,12 @@ int i, *a;
 a = malloc((max - min + 1) * sizeof(int));
 	if (a == 0)
 		return (NULL);
-	for (i = 0; i <= (max - min + 1); i++)
-		a[i] = min + i;
+i = 0;
+	while (min <= max)
+{
+		a[i] = min;
+		i++;
+		min++;
+}
 	return (a);
 }
