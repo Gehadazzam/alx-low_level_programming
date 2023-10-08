@@ -15,7 +15,7 @@
 */
 int main(int argc, char *argv[])
 {
-int mul, i, x, y;
+unsigned long int mul, i, x, y;
 	if (argc != 3)
 {
 		_putchar('E');
@@ -42,6 +42,6 @@ int mul, i, x, y;
 x = atoi(argv[1]);
 y = atoi(argv[2]);
 mul = (x *y);
-	printf("%d\n", mul);
+	printf("%lu\n", mul);
 	return (0);
 }
