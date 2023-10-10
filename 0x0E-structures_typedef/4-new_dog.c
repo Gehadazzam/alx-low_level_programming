@@ -21,5 +21,8 @@ dog_t *new_dog_apt = malloc(sizeof(dog_t));
 	new_dog_apt->age = age;
 	strcpy(new_dog_apt->name, name);
 	strcpy(new_dog_apt->owner, owner);
+	free(new_dog_apt);
+	free(new_dog_apt->name);
+	free(new_dog_apt->owner);
 	return (new_dog_apt);
 }
