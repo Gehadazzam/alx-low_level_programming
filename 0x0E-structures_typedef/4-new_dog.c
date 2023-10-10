@@ -3,25 +3,6 @@
 #include <string.h>
 #include "dog.h"
 /**
-**_strncpy - concatenates two strings
-*
-*@dest: the first string
-*
-*@src: the second string
-*
-*Return: (*dest)
-*/
-char *_strncpy(char *dest, char *src)
-{
-int i;
-	for (i = 0; src[i] != '\0'; i++)
-{
-		dest[i] = src[i];
-}
-	dest[i] = '\0';
-	return (dest);
-}
-/**
 *new_dog - fill the data of our first dog
 *
 *@name: the name of the dog
@@ -33,18 +14,20 @@ int i;
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *apt;
+int length1 = strlen(name) + 1;
+int length2 = strlen(owner) + 1;
 	if (!name || age < 0 || !owner)
 		return (NULL);
 apt = malloc(sizeof(dog_t));
 	if (apt == NULL)
 		return (NULL);
-	apt->name = malloc(sizeof(name));
+	apt->name = malloc(length1 *sizeof(char));
 	if (apt->name == NULL)
 {
 		free(apt);
 		return (NULL);
 }
-	apt->owner = malloc(sizeof(owner));
+	apt->owner = malloc(length2 *sizeof(char));
 	if (apt->owner == NULL)
 {
 		free(apt->name);
@@ -52,7 +35,7 @@ apt = malloc(sizeof(dog_t));
 		return (NULL);
 }
 	apt->age = age;
-	_strncpy(apt->name, name);
-	_strncpy(apt->owner, owner);
+	strcpy(apt->name, name);
+	strcpy(apt->owner, owner);
 	return (apt);
 }
