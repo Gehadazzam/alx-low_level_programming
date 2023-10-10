@@ -13,24 +13,27 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_dog_apt = malloc(sizeof(dog_t));
-	if ((new_dog_apt) == NULL)
+dog_t *apt;
+	if (!name || age < 0 || !owner)
 		return (NULL);
-	new_dog_apt->name = malloc(sizeof(name));
-	if (new_dog_apt->name == NULL)
+apt = malloc(sizeof(dog_t));
+	if (apt == NULL)
+		return (NULL);
+	apt->name = malloc(sizeof(name));
+	if (apt->name == NULL)
 {
-		free(new_dog_apt);
+		free(apt);
 		return (NULL);
 }
-	new_dog_apt->owner = malloc(sizeof(owner));
-	if (new_dog_apt->owner == NULL)
+	apt->owner = malloc(sizeof(owner));
+	if (apt->owner == NULL)
 {
-		free(new_dog_apt);
-		free(new_dog_apt->name);
+		free(apt->name);
+		free(apt);
 		return (NULL);
 }
-	new_dog_apt->age = age;
-	strcpy(new_dog_apt->name, name);
-	strcpy(new_dog_apt->owner, owner);
-	return (new_dog_apt);
+	apt->age = age;
+	strcpy(apt->name, name);
+	strcpy(apt->owner, owner);
+	return (apt);
 }
