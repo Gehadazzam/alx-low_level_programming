@@ -21,13 +21,13 @@ int length2 = strlen(owner) + 1;
 apt = malloc(sizeof(dog_t));
 	if (apt == NULL)
 		return (NULL);
-	apt->name = malloc(length1 *sizeof(char));
+	apt->name = malloc(length1 * sizeof(char));
 	if (apt->name == NULL)
 {
 		free(apt);
 		return (NULL);
 }
-	apt->owner = malloc(length2 *sizeof(char));
+	apt->owner = malloc(length2 * sizeof(char));
 	if (apt->owner == NULL)
 {
 		free(apt->name);
