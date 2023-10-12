@@ -27,7 +27,6 @@ unsigned int i;
 		if (i < (n - 1) && separator != NULL)
 			printf("%s", separator);
 }
-	va_end(apt);
-
 	printf("\n");
+	va_end(apt);
 }
