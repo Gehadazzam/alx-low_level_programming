@@ -13,9 +13,9 @@ listint_t *cat;
 		return;
 	while (*head)
 {
-		cat = (*head)->next;
-		free(*head);
-		*head = cat;
+		cat = *head;
+		*head = (*head)->next;
+		free(cat);
 }
 	*head = NULL;
 }
