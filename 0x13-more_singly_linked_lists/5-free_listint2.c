@@ -15,5 +15,5 @@ listint_t *cat;
 		*head = (*head)->next;
 		free(cat);
 }
-	*head = NULL;
+	head = NULL;
 }
