@@ -24,7 +24,7 @@ const char *cat1 = argv[1], *cat2 = argv[2];
 	if (argc != 3)
 {
 		print_massage("Usage: cp file_from file_to");
-	       	exit(97);
+		exit(97);
 }
 	f1 = open(argv[1], O_RDONLY);
 		if (f1 == -1)
@@ -52,9 +52,14 @@ const char *cat1 = argv[1], *cat2 = argv[2];
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", cat1);
 		exit(98);
 }
-	if (close(f1) == -1 || close(f2) == -1)
+	if (close(f1) == -1)
 {
-		print_massage("Error: Can't close f1");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", cat1);
+		exit(100);
+}
+	if (close(f2) == -1)
+{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", cat2);
 		exit(100);
 }
 	exit(0);
