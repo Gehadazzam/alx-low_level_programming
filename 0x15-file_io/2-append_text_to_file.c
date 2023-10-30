@@ -1,5 +1,4 @@
 #include "main.h"
-#include <errno.h>
 /**
 *append_text_to_file - appened text to the end of the file
 *
