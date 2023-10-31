@@ -1,5 +1,5 @@
 #include "main.h"
-#define ELF_MAGIC "\177ELF"
+#define ELF_MAGIC "0x7fELF"
 void check_file(char *argv, char *magic);
 /**
 *check_type - to check the types of file
@@ -46,11 +46,6 @@ Elf64_Ehdr kitty;
 		exit(98);
 }
 	check_file(argv[1], magic);
-	if (read(cat, magic, sizeof(magic)) != sizeof(magic))
-{
-		perror("read");
-		exit(98);
-}
 	if (lseek(cat, 0, SEEK_SET) != 0)
 {
 		perror("lseek");
@@ -119,4 +114,5 @@ int cat = open(argv, O_RDONLY);
 		dprintf(STDERR_FILENO, "%s Not an ELF file\n", argv);
 		exit(98);
 }
+	close(cat);
 }
