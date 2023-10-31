@@ -1,6 +1,6 @@
 #include "main.h"
 #define ELF_MAGIC "\177ELF"
-void check_file(char *argv);
+void check_file(char *argv, char *magic);
 /**
 *check_type - to check the types of file
 *@e_type: the data of the file
@@ -45,7 +45,7 @@ Elf64_Ehdr kitty;
 		dprintf(STDERR_FILENO, "Usage: %s elf_file\n", argv[0]);
 		exit(98);
 }
-	check_file(argv[1]);
+	check_file(argv[1], magic);
 	if (lseek(cat, 0, SEEK_SET) != 0)
 {
 		perror("lseek");
@@ -93,12 +93,12 @@ Elf64_Ehdr kitty;
 /**
 *check_file - check if it is elf file
 *@argv: the file
+*@magic: seconed member
 *Return: void
 */
-void check_file(char *argv)
+void check_file(char *argv, char *magic)
 {
 int cat = open(argv, O_RDONLY);
-char magic[4];
 	if (cat < 0)
 {
 		perror("open");
@@ -109,7 +109,7 @@ char magic[4];
 		perror("read");
 		exit(98);
 }
-	if (strncmp(magic, ELF_MAGIC, sizeof(magic)) != 0)
+	if (strncmp(magic, ELF_MAGIC, 4) != 0)
 {
 		dprintf(STDERR_FILENO, "%s Not an ELF file\n", argv);
 		exit(98);
