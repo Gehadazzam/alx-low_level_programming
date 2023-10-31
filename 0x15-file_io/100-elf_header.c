@@ -46,6 +46,11 @@ Elf64_Ehdr kitty;
 		exit(98);
 }
 	check_file(argv[1], magic);
+	if (read(cat, magic, sizeof(magic)) != sizeof(magic))
+{
+		perror("read");
+		exit(98);
+}
 	if (lseek(cat, 0, SEEK_SET) != 0)
 {
 		perror("lseek");
