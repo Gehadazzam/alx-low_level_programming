@@ -15,6 +15,7 @@ int i, j, num;
 			if (num < 10)
 {
 				_putchar('0' + num);
+				_putchar(' ');
 }
 			else
 {
