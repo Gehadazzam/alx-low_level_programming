@@ -14,8 +14,9 @@ int i, j, num;
 			num = j * i;
 			if (num < 10)
 {
+				if (j > 0)
+					_putchar(' ');
 				_putchar('0' + num);
-				_putchar(' ');
 }
 			else
 {
