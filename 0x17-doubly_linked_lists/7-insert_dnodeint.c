@@ -21,7 +21,7 @@ dlistint_t *ptr, *idx_node = malloc(sizeof(dlistint_t));
 		idx_node->next = *h;
 		if (*h != NULL)
 			(*h)->prev = idx_node;
-			*h = idx_node;
+		*h = idx_node;
 		return (idx_node);
 }
 	ptr = *h;
