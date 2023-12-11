@@ -1,5 +1,7 @@
 #include "main.h"
 char *_strstr(char *haystack, char *needle)
 {
-	return (haystack, needle);
+	(void) haystack;
+	(void) needle;
+	return(haystack);
 }
