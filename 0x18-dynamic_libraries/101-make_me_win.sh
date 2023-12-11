@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -p .. https://github.com/Gehadazzam/alx-low_level_programming/tree/master/0x18-dynamic_libraries/libgiga.so
+wget -P .. https://github.com/Gehadazzam/alx-low_level_programming/tree/master/0x18-dynamic_libraries/libgiga.so
 export LD_PRELOAD="$PWD/../libgiga.so"
