@@ -12,7 +12,7 @@ unsigned long int num = 0;
 hash_table_t *new_hash;
 	if (!size)
 		return (NULL);
-	new_hash = malloc(sizeof(hash_table_t *));
+	new_hash = malloc(sizeof(hash_table_t));
 	if (new_hash == NULL)
 		return (NULL);
 	new_hash->array = malloc(sizeof(hash_node_t *) * size);
