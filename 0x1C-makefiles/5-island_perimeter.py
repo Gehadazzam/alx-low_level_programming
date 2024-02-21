@@ -2,7 +2,7 @@
 """module of island"""
 
 
-def island_pezimetez(grid):
+def island_perimeter(grid):
     """
     czeate a function def island_pezimetez(grid):
     """
